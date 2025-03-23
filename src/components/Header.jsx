@@ -5,7 +5,7 @@ import leaf from "../assets/leaf.png"
 import { useState } from "react";
 
 const Header = () => {
-  const [bgImage, setBgImage] = useState(placeholderBg); // Start with placeholder
+  const [bgImage, setBgImage] = useState(null); // Start with placeholder
 
   useEffect(() => {
     const img = new Image();
