@@ -29,7 +29,7 @@ const CountdownTimer = () => {
     <div className="countdown">
       <img className="border" src={border} alt="" />
       <h2>We're Getting Married</h2>
-      <h3>The Countdown to Forever Begins</h3>
+      <h3 className="cssanimation lePushReleaseFrom">The Countdown to Forever Begins</h3>
       <p>By seeking the grace and blessings of Lord Ganesha, we are delighted to announce the wedding of <br /> our son and daughter, which, with divine will, will take place on:</p>
       <h1>08 May 2025</h1>
       <div className="timer">

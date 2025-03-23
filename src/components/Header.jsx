@@ -7,6 +7,16 @@ import { useEffect } from "react";
 
 const Header = () => {
   const [bgImage, setBgImage] = useState(null); // Start with placeholder
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 500);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 500);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const img = new Image();
@@ -21,12 +31,12 @@ const Header = () => {
         <h5>By the grace of the divine</h5>
           <h5>we unite in a timeless bond of love, trust, and devotion.</h5>
         <h2>THE WEDDING OF</h2>
-        <h1>
+        <h1 className="cssanimation leScaleYIn sequence">
           <img className="leaf-l" src={leaf} alt="" />
           {` `}Maruthi 
-          {window.innerWidth <= 500 && <br />}
+          {isMobile && <br />}
            & 
-           {window.innerWidth <= 500 && <br />}
+           {isMobile && <br />}
            Manjuala{` `} 
           <img className="leaf-r" src={leaf} alt="" />
           </h1>
