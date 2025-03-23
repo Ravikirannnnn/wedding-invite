@@ -1,5 +1,6 @@
 import border from "../assets/border.png"
 import "./MapSection.css"
+
 const MapSection = () => {
   const widthStyle = window.innerWidth <= 800 ? "100%" : "70%";
   return (
