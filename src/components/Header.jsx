@@ -2,7 +2,8 @@ import "./Header.css";
 import "./Header.css"
 import weddingBg from "../assets/fahmi-ramadhan-WvFKZKzOTEM-unsplash 1.png";
 import leaf from "../assets/leaf.png"
-import { useState ,useEffect} from "react";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const Header = () => {
   const [bgImage, setBgImage] = useState(null); // Start with placeholder
