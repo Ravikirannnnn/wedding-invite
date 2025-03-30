@@ -25,6 +25,8 @@ const Header = () => {
   }, []);
 
   return (
+    <>
+    {bgImage ?
     <header className="hero-section"
     style={{backgroundImage:`url(${bgImage})`}}>
       <div className="overlay">
@@ -47,6 +49,8 @@ const Header = () => {
           </p>
       </div>
     </header>
+  :null}
+  </>
   );
 };
 

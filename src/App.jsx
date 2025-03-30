@@ -5,12 +5,16 @@ import EventDetails from "./components/EventDetails";
 import MapSection from "./components/MapSection";
 import Footer from "./components/Footer";
 import "./App.css";
+import Gallery from "./components/Gallery";
+import Quickball from "./components/Quickball";
 
 function App() {
   return (
     <div>
       <Header />
       <CoupleSection />
+      <Gallery/>
+<Quickball/>
       <CountdownTimer />
       <EventDetails />
       <MapSection />
