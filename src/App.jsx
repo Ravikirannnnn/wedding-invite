@@ -7,14 +7,14 @@ import Footer from "./components/Footer";
 import "./App.css";
 import Gallery from "./components/Gallery";
 import Quickball from "./components/Quickball";
-
+// 
 function App() {
   return (
     <div>
       <Header />
       <CoupleSection />
       <Gallery/>
-<Quickball/>
+      <Quickball/>
       <CountdownTimer />
       <EventDetails />
       <MapSection />
