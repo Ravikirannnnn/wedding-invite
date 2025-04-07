@@ -4,8 +4,9 @@ import weddingBg from "../assets/fahmi-ramadhan-WvFKZKzOTEM-unsplash 1.png";
 import leaf from "../assets/leaf.png"
 import { useState } from "react";
 import { useEffect } from "react";
-
+import { useTranslation } from "react-i18next";
 const Header = () => {
+  const {t} = useTranslation();
   const [bgImage, setBgImage] = useState(null); // Start with placeholder
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 500);
 
@@ -30,21 +31,21 @@ const Header = () => {
     <header className="hero-section"
     style={{backgroundImage:`url(${bgImage})`}}>
       <div className="overlay">
-        <h5>By the grace of the divine</h5>
-          <h5>we unite in a timeless bond of love, trust, and devotion.</h5>
-        <h2>THE WEDDING OF</h2>
+        <h5>{t("first_line")}</h5>
+          <h5>{t("sec_line")}</h5>
+        <h2>{t("head")}</h2>
         <h1 className="cssanimation leScaleYIn sequence">
           <img className="leaf-l" src={leaf} alt="" />
-          {` `}Maruthi 
+          {` `}{t("male")}
           {isMobile && <br />}
            & 
            {isMobile && <br />}
-           Manjuala{` `} 
+           {t("female")}{` `} 
           <img className="leaf-r" src={leaf} alt="" />
           </h1>
         <p>
           <span className="dot">·</span>
-          {`   `}08 May 2025{` `}
+          {`   `}{t("date")}{` `}
           <span className="dot">·</span>
           </p>
       </div>

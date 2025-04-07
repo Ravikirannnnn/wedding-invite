@@ -122,7 +122,9 @@
     font-weight: 400;
   
   }
-  
+  .developer-info {
+    width: 250px;
+  }
   .developer-name {
     font-family: "Comfortaa";
     font-size: 20px !important;
