@@ -2,7 +2,7 @@
   width: 70%;
   /* max-width: 900px; */
   margin: auto;
-  padding: 20px;
+  /* padding: 20px; */
    background: rgb(255, 255, 255);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -11,7 +11,11 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   margin-top: 5%;
 }
-
+.tit-gal{
+    color: #B70B9D;
+    font-family: "Comfortaa";
+    font-size: 40px;
+}
 .wedding-slider {
   border-radius: 10px;
   overflow: hidden;
@@ -24,3 +28,11 @@
   object-fit: cover;
 }
 
+@media (max-width:800px) {
+  .gallery-container {
+    width: 90% !important;
+  }
+  .tit-gal{
+    font-size: 26px;
+}
+}

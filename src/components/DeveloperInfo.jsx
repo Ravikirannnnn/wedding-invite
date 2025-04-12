@@ -1,7 +1,9 @@
 import React from "react";
 import "./DeveloperInfo.css";
 import { motion } from "framer-motion";
-import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaMailBulk, FaPhone, FaVoicemail, FaWhatsapp } from "react-icons/fa";
+import { FaPage4 } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
 const DeveloperInfo = ({ onClose }) => {
   return (
     <motion.div 
@@ -17,12 +19,14 @@ const DeveloperInfo = ({ onClose }) => {
         <p className="developer-name">Ravikiran</p>
         <p className="developer-bio">A passionate Web Developer specializing in ReactJS, crafting immersive and beautiful UI experiences.</p>
         <p className="developer-contact">
-        📩 <a href="mailto:ravikiranrcta@gmail.com" className="email-link">ravikiranrcta@gmail.com</a>
+        📩 <a href="mailto:ravikiranrcta@gmail.com" className="email-link">Want a site like this? Let's make it happen.</a>
         </p>
         <div className="social-links">
-        <FaFacebook className="social-icon" onClick={()=>window.open("https://www.facebook.com/ravikiran.kiru.39/")}/>
+        <MdEmail className="social-icon" onClick={()=>
+          window.open("https://mail.google.com/mail/?view=cm&fs=1&to=ravikiranrcta@gmail.com&su=Let's%20Build%20a%20Website&body=Hi%20Ravi%2C%0AI%20love%20your%20work!")
+          }/>
           <FaInstagram className="social-icon" onClick={()=>window.open("https://www.instagram.com/____mr_____nayaka______/")}/>
-          <FaWhatsapp className="social-icon" onClick={()=>window.open("https://web.whatsapp.com/")}/>
+          <FaPhone className="social-icon" onClick={() => window.open("tel:+918296996668")}/>
         </div>
         <button className="close-btn" onClick={onClose}>Close</button>
       </div>

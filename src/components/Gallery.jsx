@@ -15,6 +15,8 @@ const images =[image1, image2, image3, ];
 
 const Gallery = () => {
   return (
+    <>
+      <div className="tit-gal">Gallary</div>
     <div className="gallery-container">
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
@@ -31,6 +33,7 @@ const Gallery = () => {
         ))}
       </Swiper>
     </div>
+    </>
   );
 };
 

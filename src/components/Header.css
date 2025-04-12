@@ -9,7 +9,12 @@
   justify-content: center;
   text-align: center;
   color: white;
-
+  padding-top: 5%;
+  padding-bottom: 2%;
+}
+.ganesh img{
+  width: 100px;
+  height: 100px;
 }
 .hero-section:hover{
   filter: gradiant(100%);
@@ -135,8 +140,13 @@
 @media (max-width: 500px) {
   .hero-section {
     height: 140vh;
+    padding-top: 15%;
+    padding-bottom: 3%;
   }
- 
+  .ganesh img{
+    width: 80px;
+    height: 80px;
+  }
   .overlay h1{
     font-size: 50px;
   }

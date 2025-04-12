@@ -2,6 +2,8 @@ import "./Header.css";
 import "./Header.css"
 import weddingBg from "../assets/fahmi-ramadhan-WvFKZKzOTEM-unsplash 1.png";
 import leaf from "../assets/leaf.png"
+import ganesh from "../assets/ganeshw.png"
+
 import { useState } from "react";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
@@ -31,6 +33,9 @@ const Header = () => {
     <header className="hero-section"
     style={{backgroundImage:`url(${bgImage})`}}>
       <div className="overlay">
+        <div className="ganesh">
+          <img src={ganesh} alt="ganesh" />
+        </div>
         <h5>{t("first_line")}</h5>
           <h5>{t("sec_line")}</h5>
         <h2>{t("head")}</h2>

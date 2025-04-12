@@ -4,8 +4,11 @@ import Wed2 from '../assets/web-flow.png'
 import ring from '../assets/wedding-ring.png'
 import table from '../assets/dinner-table.png'
 import map from '../assets/map.png'
+import border from "../assets/border.png"
+
 const EventDetails = () => {
   return (
+    <>
     <section className="events">
       <div className="event-card" style={{backgroundImage:`url(${Wed1})`}}>
       <div className="overlay-ev"></div>
@@ -30,6 +33,10 @@ const EventDetails = () => {
           Open Map</button>
       </div>
     </section>
+      <div>
+                  <img className="border-map-ev" src={border} alt="" />
+          </div>
+          </>
   );
 };
 

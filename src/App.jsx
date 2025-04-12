@@ -9,6 +9,7 @@ import MapSection from "./components/MapSection";
 import Footer from "./components/Footer";
 import Gallery from "./components/Gallery";
 import Quickball from "./components/Quickball";
+import Footer2 from "./components/Footer2";
 import "./App.css";
 
 // 
@@ -41,11 +42,12 @@ function App() {
         <>
       <Header />
       <CoupleSection />
-      <Gallery/>
       <Quickball/>
       <CountdownTimer />
       <EventDetails />
+      <Gallery/>
       <MapSection />
+      <Footer2/>
       <Footer />
       </>
       )}
