@@ -1,140 +1,94 @@
+/* LanguageModal.css */
+
 .modal-backdrop {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* Optional semi-dark overlay */
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   z-index: 1000;
+  animation: fadeIn 0.4s ease-in-out;
 }
 
 .modal-box {
-  position: relative;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgb(248, 205, 255);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-radius: 20px;
-  padding: 40px 30px;
-  text-align: center;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  padding: 2.5rem 2rem;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
   width: 90%;
-  max-width: 400px;
-  height: 100%;
-  max-height: 250px;
-  animation: fadeIn 0.3s ease-in-out;
-  color: #fff;
-  /* filter: grayscale(1%) brightness(2); */
-
-  background-image: url('/src/assets/faf.jpg'); /* Only inside the modal */
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;
-}
-
-.modal-box::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  backdrop-filter: blur(1px);
-  background: rgba(255, 255, 255, 0.05);
-  z-index: 0;
-}
-
-.modal-box img{
-  width: 70%;
-  height: 40%;
-  filter: grayscale(90%) brightness(6);
-  margin-top: -5%
-}
-.modal-box h2,
-.modal-box button,
-.modal-box img {
-  position: relative;
-  z-index: 1;
+  max-width: 420px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  animation: popUp 0.5s ease-in-out;
 }
 
 .modal-box h2 {
-  font-size: 1.8rem;
-  margin-bottom: 35px;
+  font-size: 1.6rem;
   color: #fff;
+  margin-bottom: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
   font-family: "Comfortaa";
-  
+  font-weight: 600;
+  color: #000;
 }
 
 .modal-box button {
-  margin: 10px;
-  padding: 12px 25px;
+  width: 80%;
+  padding: 12px 18px;
+  margin: 0.5rem 0;
   font-size: 1rem;
-  border: none;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.25);
-  color: #fff;
-  cursor: pointer;
-  backdrop-filter: blur(5px);
-  transition: all 0.3s ease;
   font-family: "Comfortaa";
-  font-weight: 800;
-
+  font-weight: 600;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  transition: all 0.3s ease;
+  font-weight: 500;
 }
 
 .modal-box button:hover {
-  background: rgba(255, 255, 255, 0.4);
-  transform: scale(1.05);
+  background: linear-gradient(135deg, #5b73e8, #9d61d4);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: scale(0.95);
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes popUp {
+  0% {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  100% {
     transform: scale(1);
+    opacity: 1;
   }
 }
 
 @media (max-width:500px) {
   .modal-box {
-    max-width: 250px;
-  }
-  .modal-box h2{
-    margin: 0 !important;
-  }
-  .modal-box button {
-    margin: 10px;
-    padding:8px 8px;
-    font-size: .8rem;
-    backdrop-filter: blur(3px);
-  }
-  .modal-box img{
-    width: 100%;
-    height: 40%;
-    margin-top: -5%
-  }
-  
-  .modal-box h2 {
-    font-size: 1.5rem;
-    /* margin: ; */
-    margin: 15px !important;
-    color: #fff;
-    font-family: "Comfortaa";
-    
-  }
+    width: 90%;
+    max-width: 300px;
+}
 }
 
 @media (max-width:400px) {
   .modal-box {
-    max-width: 200px;
-  }
-  .modal-box h2 {
-    margin: 10px !important;
-    
-  }
+    width: 90%;
+    max-width: 250px;
+}
 }

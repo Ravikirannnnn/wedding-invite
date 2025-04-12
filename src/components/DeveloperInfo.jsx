@@ -16,7 +16,7 @@ const DeveloperInfo = ({ onClose }) => {
       <div className="developer-info">
         {/* <img src="/assets/gal1.jpg" alt="Developer" className="developer-img" /> */}
         <h2 className="developer-title">Meet the Developer</h2>
-        <p className="developer-name">Ravikiran</p>
+        {/* <p className="developer-name">Ravikiran</p> */}
         <p className="developer-bio">A passionate Web Developer specializing in ReactJS, crafting immersive and beautiful UI experiences.</p>
         <p className="developer-contact">
         📩 <a href="mailto:ravikiranrcta@gmail.com" className="email-link">Want a site like this? Let's make it happen.</a>
