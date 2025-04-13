@@ -1,8 +1,12 @@
 import { useState, useEffect } from "react";
 import "./CountdownTimer.css";
 import border from '../assets/border.png'
+import { useTranslation } from "react-i18next";
 
 const CountdownTimer = () => {
+  const {t} = useTranslation();
+
+
   const calculateTimeLeft = () => {
     const weddingDate = new Date("2025-05-08T00:00:00").getTime();
     const now = new Date().getTime();
@@ -28,10 +32,10 @@ const CountdownTimer = () => {
   return (
     <div className="countdown">
       <img className="border" src={border} alt="" />
-      <h2>We're Getting Married</h2>
-      <h3 className="cssanimation lePushReleaseFrom">The Countdown to Forever Begins</h3>
-      <p>By seeking the grace and blessings of Lord Ganesha, we are delighted to announce the wedding of <br /> our son and daughter, which, with divine will, will take place on:</p>
-      <h1>08 May 2025</h1>
+      <h2>{t("count_til")}</h2>
+      <h3 className="cssanimation lePushReleaseFrom">{t("count_sub")}</h3>
+      <p dangerouslySetInnerHTML={{ __html: t("count_para") }} />
+      <h1>{t("date")}</h1>
       <div className="timer">
         <span>{timeLeft.days}
         <h5>D</h5>        

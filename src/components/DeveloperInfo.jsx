@@ -23,7 +23,7 @@ const DeveloperInfo = ({ onClose }) => {
         </p>
         <div className="social-links">
         <MdEmail className="social-icon" onClick={()=>
-          window.open("https://mail.google.com/mail/?view=cm&fs=1&to=ravikiranrcta@gmail.com&su=Let's%20Build%20a%20Website&body=Hi%20Ravi%2C%0AI%20love%20your%20work!")
+          window.open("https://mail.google.com/mail/?view=cm&fs=1&to=ravikiranrcta@gmail.com&su=Let's%20Build%20a%20Website&body=Hi%20Ravi%2C%0AI%20like%20your%20work!")
           }/>
           <FaInstagram className="social-icon" onClick={()=>window.open("https://www.instagram.com/____mr_____nayaka______/")}/>
           <FaPhone className="social-icon" onClick={() => window.open("tel:+918296996668")}/>

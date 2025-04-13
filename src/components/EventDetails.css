@@ -156,7 +156,8 @@
   .event-card p {
     font-family: "Comfortaa";
     font-size: 12px;
-    margin-bottom: 15px !important;
+    margin: 5px !important;
+    /* margin-bottom: 15px !important; */
     z-index: 5;
     position: relative;
   

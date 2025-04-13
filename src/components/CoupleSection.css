@@ -51,11 +51,14 @@
   font-family: "Allura-Regular";
   font-size: 36px;
   margin: 10px !important;
+  margin-top: 3px !important;
+  margin-bottom: 3px !important;
 }
 .groom-info p{
   font-family: "Comfortaa";
   font-size: 12px;
   line-height: 20px;
+  margin-top: 5px;
 }
 .social{
   width: 20px !important;

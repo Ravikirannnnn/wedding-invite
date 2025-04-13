@@ -3,8 +3,11 @@ import React from 'react';
 import './Footer2.css'; // Custom CSS file
 import bgImage from '../assets/fahmi-ramadhan-WvFKZKzOTEM-unsplash 1.png'; // Replace with your background image
 import border from "../assets/Border-Footer.png"
+import { useTranslation } from "react-i18next";
 
 const Footer2 = () => {
+  const {t} = useTranslation();
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -17,13 +20,13 @@ const Footer2 = () => {
 
       <div className="footer-content">
         <div className="names-box">
-          <span className="name left">Maruthi</span>
+          <span className="name left">{t("male")}</span>
           <div className="chain">
             <span className="bracket left-bracket">⎯</span>
             <span className="knot">⚭</span>
             <span className="bracket right-bracket">⎯</span>
           </div>
-          <span className="name right">Manjula</span>
+          <span className="name right">{t("female")}</span>
         </div>
 
              
