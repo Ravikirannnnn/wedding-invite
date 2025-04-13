@@ -31,7 +31,7 @@ const CountdownTimer = () => {
 
   return (
     <div className="countdown">
-      <img className="border" src={border} alt="" />
+      <img loading="lazy" className="border" src={border} alt="" />
       <h2>{t("count_til")}</h2>
       <h3 className="cssanimation lePushReleaseFrom">{t("count_sub")}</h3>
       <p dangerouslySetInnerHTML={{ __html: t("count_para") }} />

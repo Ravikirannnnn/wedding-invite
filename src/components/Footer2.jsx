@@ -32,7 +32,7 @@ const Footer2 = () => {
              
       </div>
       <div>
-                      <img className="border-map22" style={{ transform: 'scaleY(1)'}} src={border} alt="" />
+                      <img loading="lazy" className="border-map22" style={{ transform: 'scaleY(1)'}} src={border} alt="" />
               </div>
       <div className="scroll-up-btn"  onClick={scrollToTop}>↑</div>
     </div>

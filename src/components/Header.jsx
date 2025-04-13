@@ -34,19 +34,19 @@ const Header = () => {
     style={{backgroundImage:`url(${bgImage})`}}>
       <div className="overlay">
         <div className="ganesh">
-          <img src={ganesh} alt="ganesh" />
+          <img loading="lazy" src={ganesh} alt="ganesh" />
         </div>
         <h5>{t("first_line")}</h5>
           <h5>{t("sec_line")}</h5>
         <h2>{t("head")}</h2>
         <h1 className="cssanimation leScaleYIn sequence">
-          <img className="leaf-l" src={leaf} alt="" />
+          <img loading="lazy" className="leaf-l" src={leaf} alt="" />
           {` `}{t("male")}
           {isMobile && <br />}
            & 
            {isMobile && <br />}
            {t("female")}{` `} 
-          <img className="leaf-r" src={leaf} alt="" />
+          <img loading="lazy" className="leaf-r" src={leaf} alt="" />
           </h1>
         <p>
           <span className="dot">·</span>

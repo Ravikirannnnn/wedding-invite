@@ -28,7 +28,7 @@ const Gallery = () => {
       >
         {images.map((src, index) => (
           <SwiperSlide key={index}>
-            <img src={src} alt={`Wedding ${index}`} className="slide-image" />
+            <img loading="lazy" src={src} alt={`Wedding ${index}`} className="slide-image" />
           </SwiperSlide>
         ))}
       </Swiper>

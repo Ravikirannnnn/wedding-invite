@@ -17,7 +17,7 @@ const CoupleSection = () => {
       <div className="couple-card">
         <div className="groom-info">
           <div className="profile-container">
-          <img src={Male} alt="Groom" />
+          <img loading="lazy" src={Male} alt="Groom" />
           <img className="lotus" src={Backround} alt="" />
           </div>
           <span>{t("chi_kum")}</span> 
@@ -26,13 +26,13 @@ const CoupleSection = () => {
           <span>{t("sone_of")}</span>
           <p>{t("grrom_parents")}</p>
           <p>{t("grooms_village")}</p>
-          <img className="social" src={fb} alt="facebook" />
-          <img className="social" src={insta} alt="instagram" />
+          <img loading="lazy" className="social" src={fb} alt="facebook" />
+          <img loading="lazy" className="social" src={insta} alt="instagram" />
         </div>
         <div className="groom-info">
         <div className="profile-container">
-        <img src={Female} alt="Groom" />
-        <img className="lotus" src={Backround} alt="" />
+        <img loading="lazy" src={Female} alt="Groom" />
+        <img loading="lazy" className="lotus" src={Backround} alt="" />
         </div>
         <span>{t("chi_sow")}</span> 
           <h3>{t("female")} </h3>
@@ -40,8 +40,8 @@ const CoupleSection = () => {
           <span>{t("dau_od")}</span>
           <p>{t("bride_parents")}</p>
           <p>{t("bride_village")}</p>
-          <img className="social" src={fb} alt="facebook" />
-          <img className="social" src={insta} alt="instagram" />
+          <img loading="lazy" className="social" src={fb} alt="facebook" />
+          <img loading="lazy" className="social" src={insta} alt="instagram" />
 
         </div>
       </div>
