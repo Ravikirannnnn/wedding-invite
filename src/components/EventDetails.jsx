@@ -15,7 +15,7 @@ const EventDetails = () => {
     <section className="events">
       <div className="event-card" style={{backgroundImage:`url(${Wed1})`}}>
       <div className="overlay-ev"></div>
-      <img src={ring} alt="" />
+      <img loading="lazy" src={table} alt="" />
         <h3>{t("b1_tit")}</h3>
         <p>{t("b1_date")}</p>
         <p>{t("b1_time")}</p>
@@ -27,7 +27,7 @@ const EventDetails = () => {
       </div>
       <div className="event-card"  style={{backgroundImage:`url(${Wed2})`}}>
       <div className="overlay-ev"></div>
-      <img src={table} alt="" />
+      <img loading="lazy" src={ring} alt="" />
       <h3>{t("b2_tit")}</h3>
         <p>{t("b2_date")}</p>
         <p>{t("b2_time")}</p>
