@@ -1,4 +1,4 @@
-.hero-section {
+/* .hero-section {
   background-image: url("/assets/fahmi-ramadhan-WvFKZKzOTEM-unsplash 1.png");
   background-size: cover;
   background-position: center;
@@ -11,7 +11,35 @@
   color: white;
   padding-top: 5%;
   padding-bottom: 2%;
+} */
+.hero-section {
+  position: relative;
+  background-image: url("/assets/fahmi-ramadhan-WvFKZKzOTEM-unsplash 1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 110vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding-top: 5%;
+  padding-bottom: 2%;
+  z-index: 1;
 }
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* light black overlay */
+  z-index: -1;
+}
+
 .ganesh img{
   width: 100px;
   height: 100px;
@@ -139,7 +167,7 @@
 
 @media (max-width: 500px) {
   .hero-section {
-    height: 140vh;
+    height: 120vh;
     padding-top: 15%;
     padding-bottom: 3%;
   }
