@@ -1,7 +1,7 @@
 // src/components/Footer.jsx
 import React from 'react';
 import './Footer2.css'; // Custom CSS file
-import bgImage from '../assets/footerBg.jpg'; // Replace with your background image
+import bgImage from '../assets/FooterBg.jpg'; // Replace with your background image
 import border from "../assets/Border-Footer.png"
 import { useTranslation } from "react-i18next";
 
