@@ -1,6 +1,7 @@
 import "./Header.css";
 import "./Header.css"
-import weddingBg from "../assets/fahmi-ramadhan-WvFKZKzOTEM-unsplash 1.png";
+import weddingBg from "../assets/heroBG.jpg";
+import weddingBgMob from "../assets/heroBGMobile.jpg";
 import leaf from "../assets/leaf.png"
 import ganesh from "../assets/ganeshw.png"
 
@@ -10,6 +11,8 @@ import { useTranslation } from "react-i18next";
 const Header = () => {
   const {t} = useTranslation();
   const [bgImage, setBgImage] = useState(null); // Start with placeholder
+  const [bgImageMob, setBgImageMob] = useState(null); // Start with placeholder
+
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 500);
 
   useEffect(() => {
@@ -27,11 +30,16 @@ const Header = () => {
     img.onload = () => setBgImage(weddingBg); // Set actual image once loaded
   }, []);
 
+  useEffect(() => {
+    const img = new Image();
+    img.src = weddingBgMob;
+    img.onload = () => setBgImageMob(weddingBgMob); // Set actual image once loaded
+  }, []);
   return (
     <>
-    {bgImage ?
+    {bgImage || bgImageMob?
     <header className="hero-section"
-    style={{backgroundImage:`url(${bgImage})`}}>
+    style={{backgroundImage:isMobile ? `url(${bgImageMob})`:`url(${bgImage})`}}>
       <div className="overlay">
         <div className="ganesh">
           <img loading="lazy" src={ganesh} alt="ganesh" />
