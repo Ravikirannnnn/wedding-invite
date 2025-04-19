@@ -10,6 +10,8 @@
   box-shadow: 0 4px 10px rgba(231, 103, 103, 0.3);
   width: 70%;
   margin-top: -3%;
+  position: relative;
+  z-index: 20;
   /* filter: drop-shadow(0 0 0px  #E76767); */
 }
 .profile-container {
@@ -27,6 +29,7 @@
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
+  position: absolute;
   
 }
 
@@ -70,7 +73,7 @@
   display: flex;
   justify-content: center;
   gap: 40px;
-  margin-top: 20px;
+  margin-top: 20px;position: relative;
 }
 
 .couple-card div {

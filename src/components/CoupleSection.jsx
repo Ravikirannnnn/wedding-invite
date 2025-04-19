@@ -1,7 +1,7 @@
 import "./CoupleSection.css";
 import Backround from '../assets/Circle.png'
-import Male from '../assets/vishnu2.jpg'
-import Female from '../assets/rashmi.jpg'
+import Male from '../assets/groom.jpg'
+import Female from '../assets/bride.jpg'
 import fb from '../assets/Fb.png'
 import insta from '../assets/Insta.png'
 

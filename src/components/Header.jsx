@@ -1,15 +1,17 @@
 import "./Header.css";
 import "./Header.css"
 import weddingBg from "../assets/heroBG.jpg";
-import weddingBgMob from "../assets/heroBGMobile.jpg";
+import weddingBgMob from "../assets/wedsImgs.jpg";
 import leaf from "../assets/leaf.png"
 import ganesh from "../assets/ganeshw.png"
-
+import Confetti from "react-confetti";
+import { useWindowSize } from "react-use";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-const Header = () => {
+const Header = ({showConfetti}) => {
   const {t} = useTranslation();
+  const { width, height } = useWindowSize();
   const [bgImage, setBgImage] = useState(null); // Start with placeholder
   const [bgImageMob, setBgImageMob] = useState(null); // Start with placeholder
 
@@ -35,12 +37,26 @@ const Header = () => {
     img.src = weddingBgMob;
     img.onload = () => setBgImageMob(weddingBgMob); // Set actual image once loaded
   }, []);
+
+  
   return (
     <>
     {bgImage || bgImageMob?
     <header className="hero-section"
     style={{backgroundImage:isMobile ? `url(${bgImageMob})`:`url(${bgImage})`}}>
       <div className="overlay">
+      {showConfetti && (
+                <Confetti
+                width={width}
+                height={height}
+                recycle={false}
+                numberOfPieces={500}
+                gravity={0.2}
+                friction={1}
+                tweenDuration={6000} 
+        />
+            )}
+
         <div className="ganesh">
           <img loading="lazy" src={ganesh} alt="ganesh" />
         </div>
