@@ -13,7 +13,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "./Gallery.css";
 
 // const images =video;
-
+// 
 const Gallery = () => {
   return (
     <>
