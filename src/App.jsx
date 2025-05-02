@@ -74,6 +74,27 @@ function App() {
     setShowConfetti(true);
   };
 
+  useEffect(() => {
+    const savedLang = localStorage.getItem("language");
+    if (!savedLang) {
+      setShowModal(true);
+    } else {
+      i18n.changeLanguage(savedLang);
+    }
+  
+    // 🔊 Try to play music if gift already unwrapped
+    if (localStorage.getItem("giftOpened") === "true") {
+      // Defer music until user interacts
+      const tryStartMusic = () => {
+        startMusic();
+        window.removeEventListener("click", tryStartMusic);
+      };
+  
+      // Wait for user interaction before starting music
+      window.addEventListener("click", tryStartMusic);
+    }
+  }, [i18n]);
+  
   const handleGiftUnwrap = () => {
     setIsUnwrapped(true);
     localStorage.setItem("giftOpened", "true");
