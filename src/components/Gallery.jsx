@@ -27,6 +27,7 @@ const Gallery = () => {
         loop
         className="wedding-slider"
       >
+        {/*  */}
         {/* {images.map((src, index) => ( */}
           <SwiperSlide >
           <SwiperSlide>
